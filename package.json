@@ -1,0 +1,27 @@
+{
+  "name": "@vbs/vue-cli-plugin-eslint",
+  "version": "0.0.1-alpha.0",
+  "description": "",
+  "keywords": [
+    "vbs",
+    "vbs-plus",
+    "miniprogram",
+    "mini-request"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vbs-plus/vue-cli-plugin-eslint"
+  },
+  "license": "Apache-2.0",
+  "author": "lzheng.zj@gmail.com",
+  "files": [
+    "dist/",
+    "src/",
+    "es/"
+  ],
+  "main": "dist/index.js",
+  "module": "es/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
