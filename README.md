@@ -1,6 +1,6 @@
 # @vbs/vue-cli-plugin-eslint
 
-[![npm version](https://badge.fury.io/js/@vbs/vue-cli-plugin-eslint.svg)](https://badge.fury.io/js/@vbs/vue-cli-plugin-eslint)
+[![npm version](https://badge.fury.io/js/@vbs%2Fvue-cli-plugin-eslint.svg)](https://badge.fury.io/js/@vbs%2Fvue-cli-plugin-eslint)
 [![GitHub issues](https://img.shields.io/github/issues/vbs-plus/vue-cli-plugin-eslint)](https://github.com/vbs-plus/vue-cli-plugin-eslint/issues)
 [![GitHub forks](https://img.shields.io/github/forks/vbs-plus/vue-cli-plugin-eslint)](https://github.com/vbs-plus/vue-cli-plugin-eslint/network)
 [![GitHub stars](https://img.shields.io/github/stars/vbs-plus/vue-cli-plugin-eslint)](https://github.com/vbs-plus/vue-cli-plugin-eslint/stargazers)
