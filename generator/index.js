@@ -1,7 +1,7 @@
 module.exports = (api, { version, language, styleSort }) => {
   const package = {
     scripts: {
-      "vbslint": "eslint . --ext .js,.ts,.vue --fix",
+      vbslint: "eslint . --ext .js,.ts,.vue --fix",
     },
     devDependencies: {
       eslint: "^8.9.0", // add eslint
@@ -15,10 +15,19 @@ module.exports = (api, { version, language, styleSort }) => {
     },
     gitHooks: {
       "pre-commit": "lint-staged",
+      "commit-msg": "node ./cli/commit.js",
     },
   };
-  const parser = language === "typescript" ? "@typescript-eslint/parser" : "@babel/eslint-parser";
-  const eslintExtends = [];
+
+  const eslintrc = {
+    parser: language === "typescript" ? "@typescript-eslint/parser" : "@babel/eslint-parser",
+    extends: [
+      version === "2.x" ? "plugin:vue/recommended" : "plugin:vue/vue3-recommended",
+      "eslint:recommended",
+      ...(language === "typescript" ? ["plugin:@typescript-eslint/recommended"] : []),
+      "plugin:prettier/recommended",
+    ],
+  };
 
   // add style format
   if (styleSort) package.devDependencies["prettier-plugin-two-style-order"] = "^1.0.1";
@@ -30,19 +39,8 @@ module.exports = (api, { version, language, styleSort }) => {
     package.devDependencies["@babel/eslint-parser"] = "^7.17.0";
   }
 
-  // add basic Vue specification
-  if (version === "2.x") {
-    eslintExtends.push("plugin:vue/recommended");
-  } else {
-    eslintExtends.push("plugin:vue/vue3-recommended");
-  }
-  // add prettier specification
-  eslintExtends.push("plugin:prettier/recommended");
-  // add the specification of typescript
-  language === "typescript" && eslintExtends.push("plugin:@typescript-eslint/recommended");
-
   // render template folder
-  api.render("./template", { eslintExtends, parser });
+  api.render("./template", { eslintrc });
   // expand package.json
   api.extendPackage(package);
 };

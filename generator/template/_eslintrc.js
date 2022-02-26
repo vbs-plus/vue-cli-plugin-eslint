@@ -5,19 +5,21 @@ module.exports = {
   },
   parser: "vue-eslint-parser",
   parserOptions: {
-    parser: "<%- parser -%>",
+    parser: "<%- eslintrc['parser'] -%>",
   },
   rules: {
+    "@typescript-eslint/no-var-requires": [0],
     "prettier/prettier": [
       "error",
       {
-        printWidth: 260,
+        printWidth: 220,
+        endOfLine: "auto",
       },
     ],
   },
   extends: [
-    <%_ eslintExtends.forEach(function (eslintExtend) { _%>
-    "<%- eslintExtend %>",
+    <%_ eslintrc['extends'].forEach(function (item) { _%>
+    "<%- item %>",
     <%_ }); _%>
   ],
 };

@@ -1,6 +1,6 @@
 {
   "name": "@vbs/vue-cli-plugin-eslint",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A rule library is used to manage the code writing specifications of team members",
   "keywords": [
     "vbs",
