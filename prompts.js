@@ -32,7 +32,13 @@ module.exports = [
   {
     name: "styleSort",
     type: "confirm",
-    message: "🚩 Sorts style property declarations and groups related properties?",
+    message: "🚩 Choose install style property declarations and groups related properties",
     default: true,
+  },
+  {
+    name: "gitHooks",
+    type: "confirm",
+    message: "🚩 Choose install git submit verification",
+    default: false,
   },
 ];

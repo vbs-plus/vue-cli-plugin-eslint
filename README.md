@@ -54,7 +54,8 @@ vue add @vbs/eslint
 
 - 🚩 Choose a version of Vue.js
 - 🚩 Choose your project language
-- 🚩 Sorts style property declarations and groups related properties?
+- 🚩 Choose install style property declarations and groups related properties
+- 🚩 Choose install git submit verification
 
 ##  Questions
 
