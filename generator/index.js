@@ -1,5 +1,3 @@
-const fs = require("fs");
-
 module.exports = (api, { version, language, styleSort, gitHooks }) => {
   api.extendPackage({ scripts: { vbslint: "eslint . --ext .js,.ts,.vue --fix" } });
 
